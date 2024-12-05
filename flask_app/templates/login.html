@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--CSS-->
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <title>R.A.</title>
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="mensaje">
+        <h2>¡Atención!</h2>
+        {% for message in messages %}
+            <span>{{message}}</span>
+        {% endfor %}
+        <button id="aceptar">Aceptar</button>
+    </div>
+    <div class="overlay"></div>
+    {% endif %}
+    {% endwith %}
+    <main>
+		<section class="login-section">
+			<div class="container">
+				<div class="row">
+					<div class="img-login">
+						<img class="img-fluid" src="../static/images/ra.png">
+					</div>
+					<div class="offset-lg-4 offset-xl-7 col-lg-5">
+						<form action="{{url_for('login')}}" method="post" id="login" class="form-inicio">
+							<div class="center-x mb-4">
+								<h2 class="text-center">LOGIN</h2>
+							</div>
+							<fieldset class="mb-3">
+								<label for="usuario" class="col-form-label">Usuario</label>
+								<input type="text" class="form-control" name="usuario" id="usuario"  required>
+							</fieldset>
+							<fieldset>
+								<label for="password" class="col-form-label">Contraseña:</label>
+								<input type="password" class="form-control" name="password" id="password" required>
+							</fieldset>
+							<fieldset class="mt-4">
+								<div class="d-flex justify-content-center">
+									<button type="submit" class="btn-base" id="login"><span>Ingresar</span></button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="../static/js/mensajes.js"></script>
+</body>
+
+</html>

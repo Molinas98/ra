@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../css/fonts/Inter.ttf');
+}
+
+@font-face {
+    font-family: 'Young';
+    src: url('../css/fonts/YoungSerif-Regular.ttf');
+}
+
+:root {
+    --white: #fff;
+    --black: #1D2130;
+    --blue: #263F86;
+    --blue2: #2C3C90;
+    --red: #A23926;
+    --red2: #D41817;
+    --red3: #BA2630;
+    --yellow: #F8F0C8;
+    --yellow2: #F5F5DB;
+    --yellow3: #F8D11F;
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+    color: var(--white);
+}
+
+h2 {
+    font-family: 'Young';
+    font-size: 48px;
+    line-height: 125%;
+    color: white;
+}
+
+label {
+    color: var(--white) !important;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    color: var(--white) !important;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="checkbox"]:focus, 
+input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus{
+    border: 1px solid #4CA1AF !important;
+    box-shadow: 0 0 5px #4CA1AF !important;
+}
+
+
+.section-admin {
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
+    min-height: 100dvh;
+    padding-bottom: 50px;
+}
+
+/*Lo unico que sirve*/
+.login-section {
+    min-height: 100dvh;
+    padding-top: 100px;
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
+}
+
+.img-login {
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+    max-width: 50%;
+}
+
+
+.login-section form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    max-width: 450px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
+
+
+    & .p-add2 {
+        padding-left: 150px !important;
+    }
+
+    & #input-pass {
+        position: absolute;
+        width: 16px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    & label, & a, & span{
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    & a {
+        color: var(--orange2);
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+
+    & p {
+        font-size: 12.5px;
+        margin: 1rem 0;
+    }
+
+    & .instruccion {
+        position: absolute;
+        border-bottom: 1px solid rgba(119, 126, 137, 0.4);
+        border-left: 4px solid #71aee5;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.ct-form {
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 500px;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+.btn-base {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #4CA1AF, #2C3E50);
+    overflow: hidden;
+    padding: 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
+
+
+    svg {
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 0.5em;
+    }
+    
+    span {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px !important;
+        padding: 0.3rem;
+        margin: 0;
+        color: white !important;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &::before {
+        content: "";
+        background: #40a092;
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    &:hover span {
+        font-weight: 700;
+    }
+
+    &:hover::before {
+        transform: translate3d(100%, 0, 0);
+        
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+/* From Uiverse.io by imtausef */ 
+.btn-link {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	font-size: 1rem;
+	border-radius: 16px;
+	font-weight: 500;
+	border: none;
+	padding: 2px;
+	transition: all 0.3s ease;
+	z-index: 100;
+    display: none;
+
+    &:hover {
+        /*background: radial-gradient(circle 80px at 80% -10%, #181b1b, #000);*/
+        transform: scale(0.98) translateX(-50%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 65%;
+        height: 60%;
+        border-radius: 120px;
+        top: 0;
+        right: 0;
+        box-shadow: 0 0 20px #ffffff38;
+        z-index: -1;
+        transition: box-shadow 0.3s;
+    }
+
+    &:hover::after {
+        box-shadow: 0 0 10px #ffffff18;
+    }
+
+    &:hover .inner {
+        background: radial-gradient(circle 80px at 80% -50%, #333333, #0f0f0f);
+    }
+
+    &:hover .inner::before {
+        opacity: 0;
+    }
+
+    .blob1 {
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        border-radius: 16px;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(
+            circle 60px at 0% 100%,
+            #40a092,
+            #2C3E50,
+            transparent
+        );
+        box-shadow: -10px 10px 30px #0051ff2d;
+        transition: all 0.3s ease;
+    }
+
+    .inner {
+        padding: 14px 25px;
+        border-radius: 14px;
+        color: #fff;
+        z-index: 3;
+        position: relative;
+        background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+        transition: all 0.3s ease;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 14px;
+            background: radial-gradient(
+                circle 60px at 0% 100%,
+                #00e1ff1a,
+                #0000ff11,
+                transparent
+            );
+            position: absolute;
+            transition: opacity 0.3s;
+        }
+    }
+}
+
+#dropZone_imagen, #dropZone_video {
+    width: 350px;
+    height: 180px;
+    margin-top: 1rem;
+    padding: 30px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+#imagenIcono, #videoIcono {
+    margin-top: 1rem;
+    width: 28px;
+}
+
+#imagen, #video {
+    display: none;
+}
+
+#nombre_imagen, #nombre_video {
+    color: #2df46d;
+}
+
+
+@media (max-width: 1200px) {
+    .img-login {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .login-section form {
+        padding: 30px;
+    }
+
+    .ct-form {
+        margin-top: 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        min-height: 500px;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
+    }
+}
+
+
+/* Mensajes de Advertencia */
+.mensaje{
+    width: 300px;
+    height: 220px;
+    background: linear-gradient(90deg, rgba(44,62,80,0.8) 0%, rgba(76,161,175,0.8) 50%, rgba(44,62,80,0.8) 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 13px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 102;
+}
+
+.mensaje h2{
+    color: var(--white);
+    font-size: 36px;
+}
+
+.mensaje span {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.mensaje button {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px 0;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in;
+    padding: 5px 15px;
+    font-weight: 400;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Estilos para el div overlay */
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color de fondo semi-transparente */
+    backdrop-filter: blur(4px);
+    z-index: 101;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 6rem;
+    /* Asegura que el overlay esté por encima del contenido de atrás */
+}

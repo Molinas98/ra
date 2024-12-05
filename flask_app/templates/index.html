@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+  <title>R.A.</title>
+  <!--Custom CSS-->
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+  <a-scene
+    mindar-image="imageTargetSrc: ../static/files/imagen.mind; filterMinCF:0.0001; filterBeta: 0.001"
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+  >
+    <a-assets>
+      <video id="video" src="../static/files/video.mp4" preload="auto"></video>
+    </a-assets>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0" mytarget>
+      <a-video src="#video" position="0 0 0" height="1" width="1.5"></a-video>
+    </a-entity>
+
+    <button id="link-button"  class="btn-link">
+      <div class="blob1"></div>
+      <div class="blob2"></div>
+      <div class="inner">Vamos allá</div>
+    </button>
+  </a-scene>
+  <script src="../static/js/ra.js"></script>
+</body>
+</html>
