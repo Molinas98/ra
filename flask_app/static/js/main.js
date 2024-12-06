@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const inputImagen = document.getElementById('imagen');
   const dropZone_video = document.getElementById('dropZone_video');
   const inputVideo = document.getElementById('video');
+  const pasos = document.getElementById('link-pasos');
+  const cerrar = document.getElementById('cerrar-pasos');
 
   // Funciones para imágenes
   dropZone.addEventListener('dragover', function(e) {
@@ -71,4 +73,19 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     reader.readAsDataURL(file);
   }
+
+  pasos.addEventListener('click', function() {
+    const pasos = document.getElementById('pasos');
+    // Alternar entre mostrar y ocultar
+    if (pasos.style.display === 'none' || pasos.style.display === '') {
+        pasos.style.display = 'block';
+    } else {
+        pasos.style.display = 'none';
+    }
+  });
+
+  cerrar.addEventListener('click', function() {
+    const pasos = document.getElementById('pasos');
+    pasos.style.display = 'none';
+  });
 });

@@ -11,14 +11,6 @@
 :root {
     --white: #fff;
     --black: #1D2130;
-    --blue: #263F86;
-    --blue2: #2C3C90;
-    --red: #A23926;
-    --red2: #D41817;
-    --red3: #BA2630;
-    --yellow: #F8F0C8;
-    --yellow2: #F5F5DB;
-    --yellow3: #F8D11F;
 }
 
 *,
@@ -422,4 +414,22 @@ input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:
     overflow-y: auto;
     padding-bottom: 6rem;
     /* Asegura que el overlay esté por encima del contenido de atrás */
+}
+
+#link-pasos {
+    color: #2df46d !important;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#cerrar-pasos {
+    color: white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: end;
+    background-color: #ff0000;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
+    border-radius: 0.5rem;
 }
