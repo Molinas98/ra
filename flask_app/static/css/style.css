@@ -11,6 +11,7 @@
 :root {
     --white: #fff;
     --black: #1D2130;
+    --fs-base: clamp(1rem, 0.9517326732673267rem + 0.19801980198019803vw, 1.125rem);
 }
 
 *,
@@ -27,7 +28,7 @@
 body {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--fs-base);
     line-height: 24px;
     width: 100vw !important;
     overflow-x: hidden !important;
@@ -416,10 +417,18 @@ input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:
     /* Asegura que el overlay esté por encima del contenido de atrás */
 }
 
+#pasos {
+    display: none;
+}
+
 #link-pasos {
     color: #2df46d !important;
     margin-bottom: 1rem;
     cursor: pointer;
+}
+
+#pasos p {
+    font-size: 16px;
 }
 
 #cerrar-pasos {
@@ -429,7 +438,8 @@ input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:
     font-weight: 500;
     text-align: end;
     background-color: #ff0000;
-    padding: 0.5rem 1rem;
+    padding: 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.11) 0px 10px 50px 0px;
     border-radius: 0.5rem;
+    font-size: 15px;
 }

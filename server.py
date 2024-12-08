@@ -1,4 +1,4 @@
-from flask_app.controllers import video
+from flask_app.controllers import videos
 
 from flask_app import app
 

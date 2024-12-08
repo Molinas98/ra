@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -29,11 +29,11 @@
       <a-video src="#video" position="0 0 0" height="1" width="1.5"></a-video>
     </a-entity>
 
-    <button id="link-button"  class="btn-link">
+    <a id="link-button"  class="btn-link" href="{{video.url}}">
       <div class="blob1"></div>
       <div class="blob2"></div>
-      <div class="inner">Vamos allá</div>
-    </button>
+      <div class="inner">{{video.button}}</div>
+    </a>
   </a-scene>
   <script src="../static/js/ra.js"></script>
 </body>
